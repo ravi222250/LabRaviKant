@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BankAccount {
 
-    private List<String> transactionsHistory;
+    private final List<String> transactionsHistory;
 
     private double balance;
     private String ownerName;
@@ -40,7 +40,7 @@ public class BankAccount {
     }
 
     public void printTranscationsHistory() {
-        System.out.println(transactionsHistory);
+        transactionsHistory.forEach(System.out::println);
     }
 
     public void deposit (double amount) {
